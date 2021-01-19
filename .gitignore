@@ -1,0 +1,4 @@
+# Created by .ignore support plugin (hsz.mobi)
+/node-red-docker.iml
+/.idea/
+node_modules/
