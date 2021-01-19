@@ -74,7 +74,7 @@
     },
     color: '#d8bfd8',
     inputs: 1,
-    outputs: 0,
+    outputs: 1,
     icon: 'bridge.svg',
     align: 'right',
     label: function () {
@@ -367,27 +367,24 @@
   </dl>
 
   <h3>Outputs</h3>
-  <ol class="node-ports">
-    <li>
-      Standard output
+      Ingest error messages
       <dl class="message-properties">
         <dt>
-          payload
+          dataset
           <span class="property-type">string</span>
         </dt>
-        <dd>the standard output of the command.</dd>
-      </dl>
-    </li>
-    <li>
-      Standard error
-      <dl class="message-properties">
+        <dd>Target Flo.w dataset</dd>
+        <dt>
+          topic
+          <span class="property-type">string</span>
+        </dt>
+        <dd>Error topic for target dataset</dd>
         <dt>
           payload
-          <span class="property-type">string</span>
+          <span class="property-type">object</span>
         </dt>
-        <dd>the standard error of the command.</dd>
+        <dd>Error object</dd>
       </dl>
-    </li>
   </ol>
 
   <h3>Details</h3>
@@ -400,6 +397,10 @@
     The ingest action can be configured in the node or, if left blank, set by
     <code>msg.action</code>
     .
+  </p>
+
+  <p>
+    Ingest errors will be sent to the node output.
   </p>
 
   <h3>References</h3>

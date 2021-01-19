@@ -30,3 +30,7 @@ Optionally, you can specify ingest action and qos via msg (node configuration ha
 
 - `msg.action` - Ingest action.
 - `msg.qos` - MQTT QoS.
+
+## Node Output
+
+Ingest errors will be sent to the node output.
