@@ -1,6 +1,6 @@
 {
     "name": "@emuanalytics/node-red-contrib-flow-ingest",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A Node-RED node to ingest data to Flo.w Real-Time",
     "author": {
       "name": "Robin Summerhill",
