@@ -449,7 +449,7 @@ module.exports = function (RED) {
     this.dataset = n.dataset;
     this.action = n.action;
 
-    this.qos = n.qos || null;
+    this.qos = n.qos || 0;
     this.retain = n.retain;
     this.broker = n.broker;
     this.brokerConn = RED.nodes.getNode(this.broker);

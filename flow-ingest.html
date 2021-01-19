@@ -15,7 +15,7 @@
   <div class="form-row">
     <label for="node-input-broker">
       <i class="fa fa-globe"></i>
-      <span data-i18n="mqtt.label.broker"></span>
+      <span>Server</span>
     </label>
     <input type="text" id="node-input-broker" />
   </div>
@@ -39,7 +39,7 @@
     </select>
     &nbsp;&nbsp;
     <i class="fa fa-empire"></i>
-    <span data-i18n="mqtt.label.qos"></span>
+    <span>QoS</span>
     &nbsp;
     <select id="node-input-qos" style="width:125px !important">
       <option value=""></option>
@@ -51,9 +51,9 @@
   <div class="form-row">
     <label for="node-input-name">
       <i class="fa fa-tag"></i>
-      <span data-i18n="common.label.name"></span>
+      <span>Name</span>
     </label>
-    <input type="text" id="node-input-name" data-i18n="[placeholder]common.label.name" />
+    <input type="text" id="node-input-name" placeholder="Name" />
   </div>
   <div class="form-tips">
     <span>Leave action or qos blank if you want to set them via msg properties.</span>
@@ -68,7 +68,7 @@
       dataset: { value: '', required: true },
       action: { value: 'insert' },
       topic: { value: '' },
-      qos: { value: '' },
+      qos: { value: '0' },
       retain: { value: '' },
       broker: { type: 'flow-mqtt-broker', required: true },
     },
@@ -90,9 +90,9 @@
   <div class="form-row">
     <label for="node-config-input-name">
       <i class="fa fa-tag"></i>
-      <span data-i18n="common.label.name"></span>
+      <span>Name</span>
     </label>
-    <input type="text" id="node-config-input-name" data-i18n="[placeholder]common.label.name" />
+    <input type="text" id="node-config-input-name" placeholder="Name" />
   </div>
   <div class="form-row">
     <ul style="min-width: 600px; margin-bottom: 20px;" id="node-config-flow-mqtt-broker-tabs"></ul>
@@ -102,21 +102,21 @@
       <div class="form-row node-input-broker">
         <label for="node-config-input-broker">
           <i class="fa fa-globe"></i>
-          <span data-i18n="mqtt.label.broker"></span>
+          <span>Server</span>
         </label>
         <input
           type="text"
           id="node-config-input-broker"
           style="width:40%;"
-          data-i18n="[placeholder]mqtt.label.example"
+          placeholder="flow.emu-analytics.net"
         />
         <label for="node-config-input-port" style="margin-left:20px; width:43px; ">
-          <span data-i18n="mqtt.label.port"></span>
+          <span>Port</span>
         </label>
         <input
           type="text"
           id="node-config-input-port"
-          data-i18n="[placeholder]mqtt.label.port"
+          placeholder="Port"
           style="width:55px"
         />
       </div>
@@ -143,14 +143,13 @@
         <label
           for="node-config-input-usetls"
           style="width: auto"
-          data-i18n="mqtt.label.use-tls"
-        ></label>
+        >Enable secure (SSL/TLS) connection</label>
         <div id="node-config-row-tls" class="hide">
           <label
             style="width: auto; margin-left: 20px; margin-right: 10px;"
             for="node-config-input-tls"
           >
-            <span data-i18n="mqtt.label.tls-config"></span>
+            <span>TLS Configuration</span>
           </label>
           <input style="width: 300px;" type="text" id="node-config-input-tls" />
         </div>
@@ -160,18 +159,18 @@
       <div class="form-row">
         <label for="node-config-input-clientid">
           <i class="fa fa-tag"></i>
-          <span data-i18n="mqtt.label.clientid"></span>
+          <span>Client ID</span>
         </label>
         <input
           type="text"
           id="node-config-input-clientid"
-          data-i18n="[placeholder]mqtt.placeholder.clientid"
+          placeholder="Leave blank for auto-generated"
         />
       </div>
       <div class="form-row">
         <label for="node-config-input-keepalive" style="width: auto">
           <i class="fa fa-clock-o"></i>
-          <span data-i18n="mqtt.label.keepalive"></span>
+          <span>Keep alive time (s)</span>
         </label>
         <input type="text" id="node-config-input-keepalive" style="width: 50px" />
       </div>
@@ -184,8 +183,7 @@
         <label
           for="node-config-input-cleansession"
           style="width: auto;"
-          data-i18n="mqtt.label.cleansession"
-        ></label>
+        >Use clean session</label>
       </div>
     </div>
   </div>
