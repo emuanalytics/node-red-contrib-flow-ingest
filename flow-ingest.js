@@ -474,7 +474,7 @@ module.exports = function (RED) {
         msg.topic = `${this.brokerConn.username}/dataset/${msg.dataset}/changes`;
 
         if (msg.hasOwnProperty('payload')) {
-          msg.payload = { action: msg.action, data: msg.payload };
+          msg.payload = { messageId: msg._msgid, action: msg.action, data: msg.payload };
           if (
             msg.hasOwnProperty('dataset') &&
             typeof msg.dataset === 'string' &&
